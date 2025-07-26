@@ -10,7 +10,7 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg'); /* ✅ 背景图：放置一张高质量黑金图像 */
+      background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -18,9 +18,9 @@
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.6); /* ✅ 半透明黑金遮罩 */
+      background: rgba(0, 0, 0, 0.6);
       width: 100%;
-      height: 80vh; /* ✅ 覆盖 80%，露出底部20%背景 */
+      height: 80vh;
       position: fixed;
       top: 0;
       left: 0;
@@ -36,7 +36,7 @@
 
     h1 {
       font-size: 48px;
-      color: #FFD700; /* 金色标题 */
+      color: #FFD700;
       margin-bottom: 20px;
     }
 
@@ -54,28 +54,9 @@
     .logo-below img {
       height: 80px;
       width: auto;
-      /* ✅ 确保使用透明背景的 PNG 图 */
       filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
     }
 
-    .footer {
-      margin-top: 40px;
-      padding: 10px 0;
-      text-align: center;
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    .fullscreen-link {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 30;
-    }
-
-    /* ✅ 下滑提示箭头 */
     .scroll-down {
       position: absolute;
       bottom: 20px;
@@ -90,40 +71,73 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(10px); }
     }
+
+    /* 📬 放大版邮件 */
+    .contact-big {
+      font-size: 60px;
+      font-weight: bold;
+      color: #FFD700;
+      margin: 60px 0 40px 0;
+    }
+
+    /* 👣 页脚版权 */
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0 20px 0;
+      font-size: 14px;
+      color: #ccc;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .fullscreen-link {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 30;
+    }
   </style>
 </head>
 <body>
 
+  <!-- ✅ 第一页 -->
   <div class="overlay">
     <h1>Alpha Nexus</h1>
     <p>
       Data-driven strategic insights empowering global crypto, finance, real estate, and trade ventures.
     </p>
 
-    <!-- ✅ Logo 图片（建议透明背景 PNG） -->
     <div class="logo-below">
       <img src="logo.png" alt="Alpha Nexus Logo">
     </div>
 
-    <div class="footer">
-      © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
-    </div>
-
-    <!-- ✅ 下滑提示箭头 -->
+    <!-- 🔽 滑动提示 -->
     <a href="#next" class="scroll-down">↓</a>
   </div>
 
-  <!-- ✅ 第二页内容：About 区块 -->
-  <div id="next" style="height: 100vh; background: rgba(0,0,0,0.85); color: white; text-align: center; padding: 120px 20px;">
+  <!-- ✅ 第二页 -->
+  <div id="next" style="min-height: 100vh; background: rgba(0,0,0,0.85); color: white; text-align: center; padding: 120px 20px 60px 20px;">
     <h2 style="font-size: 36px; margin-bottom: 20px;">Empowering Strategic Intelligence</h2>
     <p style="max-width: 700px; margin: 0 auto; font-size: 18px; line-height: 1.6; color: #ccc;">
       We are a cross-border advisory firm specializing in data-driven business intelligence, investor relations, and Web3 strategy.
       <br /><br />
       At Alpha Nexus, we support high-growth ventures across crypto, finance, real estate, and international trade — transforming data into actionable insights for decision-makers worldwide.
     </p>
+
+    <!-- ✅ 三倍大的联系我们 -->
+    <div class="contact-big">
+      clairesiwang@alphalink.com
+    </div>
   </div>
 
-  <!-- ✅ 点击整页跳转的链接 -->
+  <!-- ✅ 页面底部版权信息 -->
+  <div class="footer-bottom">
+    © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
+  </div>
+
+  <!-- ✅ 整页跳转区域 -->
   <a href="services.html" class="fullscreen-link"></a>
 
 </body>
