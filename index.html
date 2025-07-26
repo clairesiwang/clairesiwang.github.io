@@ -10,16 +10,17 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg');
+      background-image: url('background.jpg'); /* ✅ 背景图：放置一张高质量黑金图像 */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      scroll-behavior: smooth;
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.6); /* ✅ 半透明黑金遮罩 */
       width: 100%;
-      height: 80vh; /* 只盖住 80% 的高度 */
+      height: 80vh; /* ✅ 覆盖 80%，露出底部20%背景 */
       position: fixed;
       top: 0;
       left: 0;
@@ -35,7 +36,7 @@
 
     h1 {
       font-size: 48px;
-      color: #FFD700;
+      color: #FFD700; /* 金色标题 */
       margin-bottom: 20px;
     }
 
@@ -53,6 +54,8 @@
     .logo-below img {
       height: 80px;
       width: auto;
+      /* ✅ 确保使用透明背景的 PNG 图 */
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
     }
 
     .footer {
@@ -71,16 +74,33 @@
       height: 100%;
       z-index: 30;
     }
+
+    /* ✅ 下滑提示箭头 */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      z-index: 50;
+      font-size: 24px;
+      color: #FFD700;
+      animation: bounce 1.6s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
   </style>
 </head>
 <body>
+
   <div class="overlay">
     <h1>Alpha Nexus</h1>
     <p>
       Data-driven strategic insights empowering global crypto, finance, real estate, and trade ventures.
     </p>
 
-    <!-- ✅ Logo 显示在文字下方 -->
+    <!-- ✅ Logo 图片（建议透明背景 PNG） -->
     <div class="logo-below">
       <img src="logo.png" alt="Alpha Nexus Logo">
     </div>
@@ -88,9 +108,16 @@
     <div class="footer">
       © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
     </div>
+
+    <!-- ✅ 下滑提示箭头 -->
+    <a href="#next" class="scroll-down">↓</a>
   </div>
 
-  <!-- 点击跳转区域 -->
+  <!-- ✅ 模拟下一部分内容 -->
+  <div id="next" style="height: 100vh;"></div>
+
+  <!-- ✅ 点击整页跳转的链接（可保留或移除） -->
   <a href="services.html" class="fullscreen-link"></a>
+
 </body>
 </html>
