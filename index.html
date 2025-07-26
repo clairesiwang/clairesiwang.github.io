@@ -10,41 +10,32 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg'); /* ⚠️ 你的背景图路径 */
+      background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
     }
 
-    .fullscreen-link {
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 88vh;
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 100px 20px 0;
+      text-align: center;
+      z-index: 20;
+      color: white;
     }
-
-   .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 88vh;              /* 控制遮盖高度，留出12%背景图 */
-  position: fixed;           /* 固定在顶部 */
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 100px 20px 0;
-  text-align: center;
-  z-index: 20;
-  color: white;
-}
 
     h1 {
       font-size: 48px;
-      color: #FFD700; /* 金黄色 */
+      color: #FFD700;
       margin-bottom: 20px;
     }
 
@@ -56,28 +47,35 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
+      margin-top: auto;
+      padding: 20px 0;
       text-align: center;
       color: #ccc;
       font-size: 14px;
     }
+
+    .fullscreen-link {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 30; /* ⬅️ 高于 .overlay，确保可点击 */
+    }
   </style>
 </head>
 <body>
-  <!-- 全屏点击跳转区域 -->
-  <a href="services.html" class="fullscreen-link"></a>
-
-  <!-- 半透明内容区域 -->
   <div class="overlay">
     <h1>Alpha Nexus</h1>
-   <p>
-  Data-driven strategic insights empowering global crypto, finance, real estate, and trade ventures.
-</p >
+    <p>
+      Data-driven strategic insights empowering global crypto, finance, real estate, and trade ventures.
+    </p>
     <div class="footer">
       © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
     </div>
   </div>
+
+  <!-- 点击跳转区域放在最后 -->
+  <a href="services.html" class="fullscreen-link"></a>
 </body>
 </html>
