@@ -16,7 +16,7 @@
       scroll-behavior: smooth;
     }
 
-    /* 第一页遮罩 */
+    /* 第一页 */
     .overlay {
       background: rgba(0, 0, 0, 0.6);
       width: 100%;
@@ -68,7 +68,7 @@
       50% { transform: translateY(10px); }
     }
 
-    /* 第二页结构 */
+    /* 第二页 */
     #next {
       min-height: 100vh;
       background: rgba(0,0,0,0.85);
@@ -97,6 +97,48 @@
       margin: 60px 0 40px 0;
     }
 
+    /* 第三页：服务展示 */
+    #services {
+      min-height: 100vh;
+      background: black;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 36px;
+      margin-bottom: 60px;
+      color: #FFD700;
+    }
+
+    .service-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      flex: 1 1 250px;
+    }
+
+    .service-item div {
+      font-size: 40px;
+    }
+
+    .service-item h3 {
+      margin: 10px 0;
+    }
+
+    .service-item p {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
     .footer-bottom {
       width: 100%;
       text-align: center;
@@ -119,30 +161,27 @@
       h1 { font-size: 36px; }
       p { font-size: 16px; }
       .logo-below img { height: 60px; }
-      #next h2 { font-size: 28px; }
-      #next p { font-size: 16px; }
+      #next h2, #services h2 { font-size: 28px; }
+      #next p, .service-item p { font-size: 16px; }
       .contact-big { font-size: 36px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ 第一页 -->
+  <!-- 第一页 -->
   <div class="overlay">
     <h1>Alpha Nexus</h1>
     <p>
       Data-driven strategic insights empowering global crypto, finance, real estate, and trade ventures.
     </p>
-
     <div class="logo-below">
       <img src="logo.png" alt="Alpha Nexus Logo">
     </div>
-
-    <!-- 🔽 滑动提示 -->
     <a href="#next" class="scroll-down">↓</a>
   </div>
 
-  <!-- ✅ 第二页：独立区块 -->
+  <!-- 第二页 -->
   <div id="next">
     <h2>Empowering Strategic Intelligence</h2>
     <p>
@@ -150,13 +189,34 @@
       <br /><br />
       At Alpha Nexus, we support high-growth ventures across crypto, finance, real estate, and international trade — transforming data into actionable insights for decision-makers worldwide.
     </p>
-
     <div class="contact-big">
       clairesiwang@alphalink.com
     </div>
   </div>
 
-  <!-- ✅ 最底部页脚 -->
+  <!-- 第三页：服务内容 -->
+  <div id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <div>📊</div>
+        <h3>Business Intelligence</h3>
+        <p>Data analysis, dashboards, and insights that guide strategic growth.</p>
+      </div>
+      <div class="service-item">
+        <div>🤝</div>
+        <h3>Investor Relations</h3>
+        <p>Crafting capital narratives and reporting for global investors.</p>
+      </div>
+      <div class="service-item">
+        <div>🌐</div>
+        <h3>Web3 Strategy</h3>
+        <p>Advisory on token economy, market entry, and protocol ecosystems.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
   <div class="footer-bottom">
     © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
   </div>
