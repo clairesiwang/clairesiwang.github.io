@@ -15,7 +15,7 @@
 
     .section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -24,14 +24,15 @@
       color: #FFD700;
       border-bottom: 2px solid #FFD700;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
     .services-grid {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: space-between;
     }
 
     .service-card {
@@ -39,7 +40,7 @@
       border-radius: 12px;
       padding: 24px;
       flex: 1 1 30%;
-      min-width: 250px;
+      min-width: 300px;
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
     }
 
@@ -56,6 +57,23 @@
       line-height: 1.5;
     }
 
+    .contact {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: 14px;
+      color: #FFD700;
+    }
+
+    .contact a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     .footer {
       text-align: center;
       padding: 40px 0 20px;
@@ -65,10 +83,6 @@
   </style>
 </head>
 <body>
-  <div class="section">
-    <h2>About Us</h2>
-    <p>Alpha Nexus is a cross-border strategic advisory firm specializing in business intelligence, investor relations, and Web3 innovation. Based in the U.S., we serve high-growth companies and visionary investors around the globe.</p>
-  </div>
 
   <div class="section">
     <h2>Our Services</h2>
@@ -90,6 +104,11 @@
 
   <div class="footer">
     © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
+  </div>
+
+  <!-- 联系我们链接固定在左下角 -->
+  <div class="contact">
+    <a href="mailto:clairesiwang@alphalink.com">📩 Contact Us</a>
   </div>
 </body>
 </html>
