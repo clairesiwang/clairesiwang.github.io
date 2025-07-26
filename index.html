@@ -2,35 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alpha Nexus</title>
   <style>
     html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center;
-  font-family: 'Helvetica Neue', Arial, sans-serif; /* 替换字体 */
-  color: white;
-  text-align: center;
-  cursor: pointer;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg'); /* ⚠️ 你的背景图路径 */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
-  .overlay {
-  background: rgba(0, 0, 0, 0.65); /* 更深的暗色遮罩 */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
+    .fullscreen-link {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6); /* 暗色半透明遮罩 */
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 100px 20px 0;
+      text-align: center;
+      z-index: 20;
+      position: relative;
+      color: white;
     }
 
     h1 {
@@ -40,34 +47,35 @@
     }
 
     p {
-  font-size: 20px;
-  max-width: 800px;
-  line-height: 1.6;
-  color: #ffffff; /* 强化纯白 */
-  font-weight: 300;
-}
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}    a.fullscreen-link {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
+      font-size: 20px;
+      max-width: 800px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
       width: 100%;
-      z-index: 10;
-    } 
+      text-align: center;
+      color: #ccc;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
+  <!-- 全屏点击跳转区域 -->
   <a href=" " class="fullscreen-link"></a >
 
-  <div class="overlay"> 
+  <!-- 半透明内容区域 -->
+  <div class="overlay">
     <h1>Alpha Nexus</h1>
     <p>
-      Alpha Nexus is a cross-border strategic advisory firm specializing in business intelligence,
-      investor relations, and Web3 innovation. Based in the U.S., we serve high-growth companies and
-      visionary investors around the globe.
+      Empowering Strategic Intelligence. Bridging Capital, Data, and Innovation across Asia and the Middle East.
     </p >
-  </div> 
+    <div class="footer">
+      © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
+    </div>
+  </div>
 </body>
 </html>
