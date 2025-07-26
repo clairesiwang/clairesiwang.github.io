@@ -8,7 +8,6 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: Arial, sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
@@ -17,20 +16,18 @@
       scroll-behavior: smooth;
     }
 
+    /* 第一页遮罩 */
     .overlay {
       background: rgba(0, 0, 0, 0.6);
       width: 100%;
       height: 80vh;
-      position: fixed;
-      top: 0;
-      left: 0;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       padding: 100px 20px 0;
       text-align: center;
-      z-index: 20;
       color: white;
     }
 
@@ -60,7 +57,6 @@
     .scroll-down {
       position: absolute;
       bottom: 20px;
-      z-index: 50;
       font-size: 24px;
       color: #FFD700;
       animation: bounce 1.6s infinite;
@@ -72,7 +68,28 @@
       50% { transform: translateY(10px); }
     }
 
-    /* 📬 放大版邮件 */
+    /* 第二页结构 */
+    #next {
+      min-height: 100vh;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 60px 20px;
+    }
+
+    #next h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #next p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
     .contact-big {
       font-size: 60px;
       font-weight: bold;
@@ -80,7 +97,6 @@
       margin: 60px 0 40px 0;
     }
 
-    /* 👣 页脚版权 */
     .footer-bottom {
       width: 100%;
       text-align: center;
@@ -97,6 +113,15 @@
       width: 100%;
       height: 100%;
       z-index: 30;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 { font-size: 36px; }
+      p { font-size: 16px; }
+      .logo-below img { height: 60px; }
+      #next h2 { font-size: 28px; }
+      #next p { font-size: 16px; }
+      .contact-big { font-size: 36px; }
     }
   </style>
 </head>
@@ -117,28 +142,24 @@
     <a href="#next" class="scroll-down">↓</a>
   </div>
 
-  <!-- ✅ 第二页 -->
-  <div id="next" style="min-height: 100vh; background: rgba(0,0,0,0.85); color: white; text-align: center; padding: 120px 20px 60px 20px;">
-    <h2 style="font-size: 36px; margin-bottom: 20px;">Empowering Strategic Intelligence</h2>
-    <p style="max-width: 700px; margin: 0 auto; font-size: 18px; line-height: 1.6; color: #ccc;">
+  <!-- ✅ 第二页：独立区块 -->
+  <div id="next">
+    <h2>Empowering Strategic Intelligence</h2>
+    <p>
       We are a cross-border advisory firm specializing in data-driven business intelligence, investor relations, and Web3 strategy.
       <br /><br />
       At Alpha Nexus, we support high-growth ventures across crypto, finance, real estate, and international trade — transforming data into actionable insights for decision-makers worldwide.
     </p>
 
-    <!-- ✅ 三倍大的联系我们 -->
     <div class="contact-big">
       clairesiwang@alphalink.com
     </div>
   </div>
 
-  <!-- ✅ 页面底部版权信息 -->
+  <!-- ✅ 最底部页脚 -->
   <div class="footer-bottom">
     © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
   </div>
-
-  <!-- ✅ 整页跳转区域 -->
-  <a href="services.html" class="fullscreen-link"></a>
 
 </body>
 </html>
