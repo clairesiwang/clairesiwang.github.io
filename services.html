@@ -1,13 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services - Alpha Nexus</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpha Nexus - Services</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .service-card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 24px;
+      flex: 1 1 30%;
+      min-width: 250px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      color: white;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      margin: 10px 0 0;
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
 </head>
-<body class="services">
-  <img src="services.jpg" alt="Our Services" class="services-img" />
+<body>
+  <div class="section">
+    <h2>About Us</h2>
+    <p>Alpha Nexus is a cross-border strategic advisory firm specializing in business intelligence, investor relations, and Web3 innovation. Based in the U.S., we serve high-growth companies and visionary investors around the globe.</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Business Strategy</h3>
+        <p>Go-to-Market / Investor Deck / Fundraising Enablement</p>
+      </div>
+      <div class="service-card">
+        <h3>Data & Insights</h3>
+        <p>CRM / Dashboard / Behavioral Analytics</p>
+      </div>
+      <div class="service-card">
+        <h3>Web3 Advisory</h3>
+        <p>Token Strategy / DAO Design / Community Growth</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 Alpha Nexus LLC · clairesiwang@alphalink.com
+  </div>
 </body>
 </html>
