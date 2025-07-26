@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alpha Nexus</title>
   <style>
     html, body {
@@ -10,7 +10,7 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg'); /* ✅ 黑金背景图 */
+      background-image: url('background.jpg'); /* 黑金背景图 */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -18,7 +18,7 @@
     }
 
     .page {
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -26,49 +26,66 @@
       align-items: center;
       text-align: center;
       color: white;
-      padding: 40px;
+      padding: 5vh 5vw;
       box-sizing: border-box;
     }
 
     .second-page {
       background-color: rgba(0, 0, 0, 0.8);
-      padding: 60px 20px;
     }
 
     .section {
-      margin: 40px 0;
+      margin: 5vh 0;
     }
 
     .section-title {
-      font-size: 28px;
+      font-size: 6vw;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 1vh;
     }
 
     .section-text {
-      font-size: 18px;
-      max-width: 800px;
+      font-size: 4.2vw;
+      max-width: 90vw;
       margin: 0 auto;
+      line-height: 1.6;
     }
 
     .contact {
       position: absolute;
-      bottom: 40px;
-      left: 40px;
-      font-size: 16px;
+      bottom: 10vh;
+      left: 5vw;
+      font-size: 4vw;
       color: white;
     }
 
     .footer {
       text-align: center;
-      font-size: 14px;
-      padding: 20px 0;
+      font-size: 3.5vw;
+      padding: 3vh 0;
       color: gray;
     }
 
-    a {
-      color: white;
-      text-decoration: underline;
+    /* ---------- Responsive Design for larger screens ---------- */
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 28px;
+      }
+
+      .section-text {
+        font-size: 18px;
+        max-width: 800px;
+      }
+
+      .contact {
+        font-size: 16px;
+        bottom: 40px;
+        left: 40px;
+      }
+
+      .footer {
+        font-size: 14px;
+      }
     }
 
   </style>
